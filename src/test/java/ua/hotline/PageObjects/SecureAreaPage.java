@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static core.Driver.getDriver;
 
 public class SecureAreaPage {
-    private By flashMessages = By.xpath("//div[@id='flash']");
+    private final By flashMessages = By.xpath("//div[@id='flash']");
 
     public SecureAreaPage waitForSecureAreaPage() {
         Driver.getDriverWait().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//h4[text() = 'Welcome to the Secure Area. When you are done click logout below.']")));
